@@ -41,6 +41,15 @@ public class Tsester {
 		}
 		return true;
 	}
+	public static int f5(String[] arr, String s) {
+		int i, sum=0;
+		
+		for(i=0; i<arr.length; i++) {
+			if(arr[i].compareTo(s) == 0)
+				sum += 1;
+		}
+		return sum;
+	}
 	public static void main(String[] args) {
 		String[] arr = {"ana", "bara", "amalia"};
 		System.out.println(f4(arr));
