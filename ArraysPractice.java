@@ -104,11 +104,50 @@ public class Tsester {
 		return newArray;
 	}
 	public static char[] f13(String[] arr) {
-		int i
+		int i;
+		char[] newArray = new char[arr.length];
+		
+		for(i=0; i<arr.length; i++) {
+			newArray[i] = arr[i].charAt(0);
+		}
+		return newArray; 
+	}
+	public static boolean f14(int[] arr) {
+		int i=0;
+		int sum1=0,sum2=0;
+		
+		while(i < arr.length/2) {
+			sum1 += arr[i];
+			sum2 += arr[(arr.length-1)-i];
+			i++;
+		}
+		if(sum1 == sum2)
+			return true;
+		else
+			return false;
+	}
+	public static void f15(int[] arr) {
+		int i,sum=0;
+		
+		for(i=0; i<arr.length; i++) {
+			if(arr[i] < arr.length-1)
+				sum += arr[arr[i]];
+		}
+	}
+	public static int f16(int[] arr) {
+		int i,j;
+		int apper=0,num=0;
+		
+		for(i=0; i<arr.length; i++) {
+			for(j=0; j<arr.length; j++) {
+				if(arr[i] == arr[j])
+					apper++;
+			}
+		}
 	}
 	public static void main(String[] args) {
-		int[] arr = {2,4,3,2,1,4,4};
-		System.out.println(f10(arr));
+		int[] arr = {1,2,3,3,2,1};
+		System.out.println(f14(arr));
 	}
 }
      
