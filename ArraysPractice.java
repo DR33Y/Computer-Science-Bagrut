@@ -1,6 +1,4 @@
-package example;
-
-public class Tsester {
+public class Tester {
 	public static boolean f1(int[] arr, int k) {
 		int i, sum=0;
 		
@@ -49,6 +47,33 @@ public class Tsester {
 				sum += 1;
 		}
 		return sum;
+	}
+	public static boolean f6(int[] arr) {
+		int i;
+		
+		for(i=0; i<arr.length-1; i++) {
+			if(arr[i] == arr[i+1])
+				return false;
+		}
+		return true;
+	}
+	public static boolean f7(int[] arr) {
+		int i;
+		
+		for(i=0; i<arr.length-1; i++) {
+			if(arr[i] + arr[i+1] < 20)
+				return false;
+		}
+		return true;
+	}
+	public static boolean f8(int k, int[] arr) {
+		int i;
+		
+		for(i=0; i<arr.length-1; i++) {
+			if(arr[i] * arr[i+1] < k)
+				return false;
+		}
+		return true;
 	}
 	public static boolean f9(int[] arr) {
 		int i;
@@ -134,20 +159,7 @@ public class Tsester {
 				sum += arr[arr[i]];
 		}
 	}
-	public static int f16(int[] arr) {
-		int i,j;
-		int apper=0,num=0;
-		
-		for(i=0; i<arr.length; i++) {
-			for(j=0; j<arr.length; j++) {
-				if(arr[i] == arr[j])
-					apper++;
-			}
-		}
-	}
 	public static void main(String[] args) {
-		int[] arr = {1,2,3,3,2,1};
-		System.out.println(f14(arr));
+		
 	}
 }
-     
