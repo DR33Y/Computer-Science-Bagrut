@@ -159,7 +159,25 @@ public class Tester {
 				sum += arr[arr[i]];
 		}
 	}
-	public static void main(String[] args) {
+	public static int f16(int[] arr) {
+		int i,j;
+		int mostApper=0,num=0;
 		
+		for(i=0; i<arr.length; i++) {
+			int apper=0;
+			for(j=0; j<arr.length; j++) {
+				if(arr[i] == arr[j])
+					apper++;
+			}
+			if(apper > mostApper) {
+				num = arr[i];
+				mostApper = apper;
+			}
+		}
+		return num;
+	}
+	public static void main(String[] args) {
+
 	}
 }
+     
