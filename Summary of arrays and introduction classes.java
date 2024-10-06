@@ -97,3 +97,50 @@ public class Car {
 	}
 }
 --------------------------------------
+	public static boolean f1(int[] arr) {
+		int i;
+		
+		for(i=0; i<arr.length-1; i++) {
+			if(arr[i] > arr[i+1])
+				return false;
+		}
+		return true;
+	}
+	public static boolean f2(int[] arr) {
+		int i;
+		
+		for(i=0; i<arr.length; i++) {
+			if(arr[i] > 10 || arr[i] < 1)
+				return false;
+		}
+		return true;
+	}
+	public static boolean f3(int[] arr,int k) {
+		int i;
+		
+		for(i=0; i<k; i++) {
+			if(arr[i] != arr[(k*2)-1-i]){
+				return false;
+			}
+		}
+		return true;
+	}
+	public static boolean f4(int[] arr, int k) {
+		int i;
+		int sum=0;
+		
+		for(i=0; i<arr.length; i++) {
+			if(i < k) {
+				if(arr[i]%2 != 0)
+					sum += arr[i];
+			}
+			if(i > k) {
+				if(arr[i]%2 == 0)
+					sum += arr[i];
+			}
+		}
+		if(arr[k] == sum)
+			return true;
+		else
+			return false;
+	}
