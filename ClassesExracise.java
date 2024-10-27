@@ -79,10 +79,10 @@ public class Animal {
 
 Zoo Class
   -------------------------------------
-  package example;
+package example;
 
 public class Zoo {
-	private String name;
+	private String name;	
 	private Animal[] animals;
 	
 	public Zoo(String name) {
@@ -138,7 +138,7 @@ public class Zoo {
 		}
 		return false;
 	}
-	public void printAllAnimalsLessFiveToneAndFrinedlya() {
+	public void printAllAnimalsLessFiveToneAndFrinedly() {
 		int i;
 		
 		for(i=0; i<this.animals.length; i++) {
@@ -146,5 +146,16 @@ public class Zoo {
 				System.out.println(animals[i].getName());
 		}
 	}
+	public void FoodToBuy() {
+		int i;
+		int sum=0;
+		
+		for(i=0; i<this.animals.length; i++) {
+			sum += animals[i].getWeight();
+		}
+		System.out.println("sum of all animals weight: "+sum);
+		System.out.println("food cost for all animals: "+sum/20+" kg");
+	}
 }
+
 
